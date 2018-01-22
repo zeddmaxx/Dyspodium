@@ -13,6 +13,8 @@ class UserInfo(models.Model):
     bio = models.CharField(max_length=30)
     photo = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.user_name +"- "+ self.bio
 
 class Question(models.Model):
     question = models.CharField(max_length=100)
@@ -21,6 +23,8 @@ class Question(models.Model):
     report = models.IntegerField
     no_answers = models.IntegerField
     tags = models.CommaSeparatedIntegerField
+    def __str__(self):
+        return self.question +"- "+ self.creator
 
 
 class Answer(models.Model):
@@ -30,6 +34,9 @@ class Answer(models.Model):
     upvotes = models.IntegerField
     views = models.BigIntegerField
     report = models.IntegerField
+    
+    def __str__(self):
+        return self.answer +"- "+ str(self.upvotes)
 
 
 class Upvotes(models.Model):

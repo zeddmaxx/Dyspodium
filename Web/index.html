@@ -371,14 +371,25 @@
             </div>
             <!-- #END# Widgets -->
             <!-- CPU Usage -->
+            <ul>
+{% for i in all_qs %}
             <div class="row clearfix">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="header">
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-6">
-                                    
+                                    <h2> Here are all the Questions</h2>
+
+    <li>
+        <h3> <a href = "/questions/{{i.id}}/"  style="color:red"> {{i.question}} </h3></a> <h4>{{ i.creator }}</h4>
+        
+    </li>
+
                                 </div>
+                                    
+{% endfor %}
+</ul>
                                 <div class="col-xs-12 col-sm-6 align-right">
                                     <div class="switch panel-switch-btn">
                                         
