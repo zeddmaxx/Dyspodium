@@ -6,13 +6,12 @@ class UserInfo(models.Model):
     last_name = models.CharField(max_length=50)
     user_name = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
-    dob = models.parse_date
     contact_no = models.CharField(max_length=13)
-    location = models.CharField()
-    password = models.CharField(min_lengt=6)
+    location = models.CharField(max_length=100)
+    password = models.CharField(max_length=15)
     interests = models.CommaSeparatedIntegerField
     bio = models.CharField(max_length=30)
-    photo = models.CharField(maxlength=100)
+    photo = models.CharField(max_length=100)
 
 
 class Question(models.Model):
