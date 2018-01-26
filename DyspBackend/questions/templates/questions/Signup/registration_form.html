@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!-- multistep form -->
+<head>
+  
+ <link rel="stylesheet" type="text/css" href="{% static 'lcss.css' %}">
+  <script type="text/javascript" src="{% static 'lj.js' %}"></script>
+
+</head>
+<form id="msform" action="">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Account Setup</li>
+    <li>Social Profiles</li>
+    <li>Personal Details</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Create your account</h2>
+    <h3 class="fs-subtitle">This is step 1</h3>
+    <input type="text" name="username" placeholder="Username" />
+    <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="password" name="password" placeholder="Confirm Password" />
+    <input type="submit" name="next" class="next action-button" value="Next" />
+  </fieldset>
+</form>
