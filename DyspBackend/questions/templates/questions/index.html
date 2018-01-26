@@ -1,5 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -14,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap Core Css -->
-    <link href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
     <link href="{% static 'plugins/node-waves/waves.css' %}" rel="stylesheet" />
@@ -30,7 +30,8 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />hemes -->
+
 </head>
 
 <body class="theme-red">
@@ -238,7 +239,7 @@
                                     <span>Interest 2</span>
                                 </a>
                             </li>
-			    <li>
+                <li>
                                 <a>
                                     <span>Interest 3</span>
                                 </a>
@@ -255,7 +256,7 @@
                             </li>
                         </ul>
                     </li>
-		    <li>
+            <li>
                         <a href="pages/typography.html">
                             <i class="material-icons">text_fields</i>
                             <span>User Details</span>
@@ -320,93 +321,50 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>DASHBOARD</h2>
+                <h2>USER FEED</h2>
             </div>
 
-            <!-- Widgets -->
+
+
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-pink hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">playlist_add_check</i>
-                        </div>
-                        <div class="content">
-                            <div class="text">NEW TASKS</div>
-                            <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-cyan hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">help</i>
-                        </div>
-                        <div class="content">
-                            <div class="text">NEW TICKETS</div>
-                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-light-green hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">forum</i>
-                        </div>
-                        <div class="content">
-                            <div class="text">NEW COMMENTS</div>
-                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-orange hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">person_add</i>
-                        </div>
-                        <div class="content">
-                            <div class="text">NEW VISITORS</div>
-                            <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <h2> Welcome to your feed! Here are all the Questions :</h2>
-    	<ul>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-		{% for i in all_qs %}
-            
-        	<div class="card">
-            	<div class="row clearfix">
-       
-				<li>
-        			<h3> <a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}} </h3></a> <h4>{{ i.creator }}</h4>
-                    
-        
-    			</li>
-            	</div>
-        	</div>
+                    <div class="card">
 
-      	<br>
-                               
-	{% endfor %}
-</ul>
+                {% for i in all_qs %}
+                        <div class="header">
+
+                            <div class="row clearfix">
+                              
+                                <div class="col-xs-12 col-sm-6">
+                                
+                                    <div class="user-info">
+
+                                        <div class="col-md-3 image">
+                                
+                                        <img src="{% static 'images/user.png' %}" width="48" height="48" alt="User" class="img-circle img-responsive" />
+                                        
+                                 </div>
+
+                                 <div class="info-container">
+                                    <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> {{ i.creator }} : <br> <a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}}</a> :</h5></div>
+                                    
+                                </div>
+                            
+                            </div>
+
                                 <div class="col-xs-12 col-sm-6 align-right">
+
                                     <div class="switch panel-switch-btn">
                                         
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="body">
-                            <div class="dashboard-flot-chart"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# CPU Usage -->
-    <!-- Jquery Core Js -->
+                            <div align="right"><a href = "#"  style="color:red"><h6>Report</h6></a></div>
+                                    <div align="right"><h6>Date</h6></div>
+{% endfor %}
+
+<!-- Jquery Core Js -->
     <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core Js -->
@@ -447,6 +405,7 @@
 
     <!-- Demo Js -->
     <script src="{% static 'js/demo.js' %}"></script>
+    
 </body>
 
 </html>
