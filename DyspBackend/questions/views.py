@@ -16,3 +16,4 @@ def qs(request, q_id):
 		raise Http404("Question does not exist!")
 	return render(request, 'questions/qs.html',{'q':q})
 
+

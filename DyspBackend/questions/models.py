@@ -1,4 +1,6 @@
 from django.db import models
+from datetime import datetime
+
 
 
 class UserInfo(models.Model):
@@ -23,6 +25,8 @@ class Question(models.Model):
     report = models.IntegerField
     no_answers = models.IntegerField
     tags = models.CommaSeparatedIntegerField
+    #date = models.DateTimeField(default=datetime.now, blank=True)
+
     def __str__(self):
         return self.question +"- "+ self.creator
 
@@ -34,6 +38,7 @@ class Answer(models.Model):
     upvotes = models.IntegerField
     views = models.BigIntegerField
     report = models.IntegerField
+    #date = models.DateTimeField(auto_now = True)
     
     def __str__(self):
         return self.answer +"- "+ str(self.upvotes)
