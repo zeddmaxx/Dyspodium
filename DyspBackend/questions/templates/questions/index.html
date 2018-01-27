@@ -66,7 +66,12 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    
+                    <li class="">
+                        <a href="{% url 'question:question-add' %}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
+                        </a>
+                    </li>
+
                     <!-- Notifications -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
@@ -284,7 +289,7 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2018 - 2019 <a href="javascript:void(0);">Dispodium</a>
+                    &copy; 2018 - 2019 <a href="javascript:void(0);">Dyspodium</a>
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0
@@ -330,7 +335,7 @@
                                  </div>
 
                                  <div class="info-container">
-                                    <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> {{ i.creator }} : <br> <a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}}</a> :</h5></div>
+                                    <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> {{ i.creator }} :<a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}}</a> </h5></div>
                                     
                                 </div>
                             

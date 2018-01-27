@@ -1,0 +1,38 @@
+
+{% block title %} Add a New Question {% endblock %}
+{% block questions_active %}active{%  endblock %}
+
+
+{% block body %}
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-7">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+
+					{% csrf_token %}
+					{% include 'questions/form-template.html' %}
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-success">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+

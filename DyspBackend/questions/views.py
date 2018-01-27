@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from django.http import HttpResponse
-from .models import Question
+from .models import Question, Answer
 from .forms import UserForm
+from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
 
 
 
@@ -19,6 +22,14 @@ def qs(request, q_id):
 	except Question.DoesNotExist:
 		raise Http404("Question does not exist!")
 	return render(request, 'questions/qs.html',{'q':q})
+
+
+class QuestionCreate(CreateView):
+	model = Question
+	fields = ['question', 'creator']
+	
+
+
 
 class UserFormView(View):
 	form_class = UserForm
