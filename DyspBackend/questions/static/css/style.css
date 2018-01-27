@@ -1,7 +1,7 @@
 ﻿/* Navbar ====================================== */
 @import url(materialize.css);
 .navbar {
-  font-family: "Roboto", sans-serif;
+  font-family: "Droid+Sans";
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
