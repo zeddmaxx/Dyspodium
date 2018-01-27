@@ -10,7 +10,7 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
@@ -55,7 +55,7 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true"></a>
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="widgets/../../index.html">DISPODIUM</a>
             </div>
@@ -179,11 +179,20 @@
     <!-- #Top Bar -->
     <section>
         <!-- Left Sidebar -->
-        <aside id="leftsidebar" class="sidebar">
+<div id="content">
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+        <i class="glyphicon glyphicon-align-left"></i>
+        Toggle Sidebar
+    </button>
+<div>
+
+<div class="wrapper">
+
+        <nav id="leftsidebar" class="sidebar">
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="../images/user.png" width="48" height="48" alt="User" />
+                    <img src="../images/user.png" width="48" height="48" alt="User"/>
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
@@ -194,7 +203,11 @@
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
+
+
+
                     <li class="header">MAIN NAVIGATION</li>
+
                     <li>
                         <a href="../index.html">
                             <i class="material-icons">home</i>
@@ -281,6 +294,9 @@
                         </a>
                     </li>
                     
+
+
+
                 </ul>
             </div>
             <!-- #Menu -->
@@ -294,7 +310,12 @@
                 </div>
             </div>
             <!-- #Footer -->
-        </aside>
+        </nav>
+</div>
+
+
+
+
         <!-- #END# Left Sidebar -->
         <!-- Right Sidebar -->
         <aside id="rightsidebar" class="right-sidebar">
@@ -309,45 +330,58 @@
             <div class="block-header">
                 <h2>PROFILE</h2>
             </div>
-            <!-- Body Copy -->
             <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2>
-                                USER DETAILS
-                            </h2>
+                            <div class="row clearfix">
                             
-                        </div>
-                        <div class="body">
-                            <p class="lead">
-				First Name :                                 
-                            </p>
-<p class="lead">
-				Last Name :                                 
-                            </p>
-<p class="lead">
-				Username :                                 
-                            </p>
-<p class="lead">
-				Email Id :                                 
-                            </p>
-<p class="lead">
-				 Phone No. :                                 
-                            </p>
-<p class="lead">
-				Date of Birth :                                 
-                            </p>
-<p class="lead">
-				Location :                                 
-                            </p>
+                                <div class="col-xs-12 col-sm-6">
+                                  
+                                    <div class="user-info">
+                                        <div class="col-md-3 image">
+                                
+                                        <img src="images/user.png" width="100" height="100" alt="User" class="img-circle img-responsive" />
+                                        <div>
+                                   
+                                   </div> 
+                                 </div>
+                                  
+                                  
+
+
+                                 <div class="info-container">
+                                    <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> Name : <br> Bio :</h5></div>
+                                    
+                                </div>
                             
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Body Copy -->
+                                
+                            </div>
+</div>
+</div>
+</div>
+</div>
             
+    </section>
+<section class="content">
+    
+     <div class="rows">
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Questions</a></li>
+  <li><a href="#">Answers</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interests
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Interest 1</a></li>
+      <li><a href="#">Interest 2</a></li>
+      <li><a href="#">Interest 3</a></li> 
+      <li><a href="#">Interest 4</a></li> 
+      <li><a href="#">Interest 5</a></li> 
+    </ul>
+  </li>
+  
+</ul></div>       
     </section>
 
     <!-- Jquery Core Js -->
