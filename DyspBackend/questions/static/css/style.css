@@ -1,5 +1,21 @@
 ﻿/* Navbar ====================================== */
 @import url(materialize.css);
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+ min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
 .navbar {
   font-family: "Droid+Sans";
   -webkit-border-radius: 0;
