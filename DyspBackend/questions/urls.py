@@ -12,9 +12,11 @@ urlpatterns = [
 	url(r'^(?P<q_id>[0-9]+)/$', views.qs, name='qs'),
 
 	#/register/??
-    url(r'^register/$', views.UserFormView.as_view(), name='register'),
+    #url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
     #/question/q/add/
     url(r'q/add/$', views.QuestionCreate.as_view(), name='question-add'),
+
+
 
 ]

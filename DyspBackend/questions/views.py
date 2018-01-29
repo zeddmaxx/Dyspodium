@@ -6,6 +6,8 @@ from .models import Question, Answer
 from .forms import UserForm
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+
 
 
 
@@ -27,39 +29,11 @@ def qs(request, q_id):
 class QuestionCreate(CreateView):
 	model = Question
 	fields = ['question', 'creator']
+
+#class QuestionUpdate(UpdateView):
+#	model = Question
+#	fields = ['question', 'creator']
 	
 
 
 
-class UserFormView(View):
-	form_class = UserForm
-	template_name = 'questions/Signup/registration_form.html'
-
-	# display blank form
-	def get(self, request):
-		form = self.form_class(None)
-		return render(request, self.template_name, {'form': form})
-
-	# process form data
-	def post(self, request):
-		form = self.form_class(request.POST)
-
-		if form.is_valid():
-
-			user = form.save(commit=False)
-
-			# Normalisation of data
-			usename = form.cleaned_data['username']
-			password = form.cleaned_data['password']
-			user.set_password(password)
-			user.save()
-
-			user = authenticate(username = usename, password = password)
-
-			if user is not None:
-
-				if user.is_active:
-					login(request, user)
-					return redirect('questions:index')
-
-		return render(request, self.template_name, {'form':form})
