@@ -33,7 +33,48 @@
     <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />
 
 </head>
+<style>
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+	.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
 <body class="theme-red">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
@@ -82,8 +123,7 @@
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
                         </a>
                     </li>
-
-                    <!-- Notifications -->
+	<!-- Notifications -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">notifications</i>
@@ -192,6 +232,19 @@
                         </ul>
                     </li>
                     <!-- #END# Notifications -->
+
+		<li class="image">
+			<a href="#">
+			<span aria-hidden="true"></span><img onclick="myFunction()" class="dropbtn" src="{% static 'images/user.png' %}" width="48" height="48" alt="User" /></span>
+			</a>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="pages/typography.html">Profile</a>
+				<a href="pages/changelogs.html">Settings</a>
+				<a href="#">Logout</a>
+			</div>
+		</li>
+
+	       
                     </ul>
             </div>
         </div>
@@ -200,113 +253,21 @@
     <section>
         <!-- Left Sidebar -->
         <aside id="leftsidebar" class="sidebar">
-            <!-- User Info -->
-            <div class="user-info">
-                <div class="image">
-                    <img src="{% static 'images/user.png' %}" width="48" height="48" alt="User" />
-                </div>
-                <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">Bio</div>
-                    </div>
-            </div>
-            <!-- #User Info -->
+            
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
+                    
                     <li class="active">
-                        <a href="index.html">
-                            <i class="material-icons">home</i>
-                            <span>Home</span>
-                        </a>
+                        
                     </li>
                     
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">widgets</i>
-                            <span>Interests</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a>
-                                    <span>Interest 1</span>
-                                </a>
-                                </li>
-                            <li>
-                                <a>
-                                    <span>Interest 2</span>
-                                </a>
-                            </li>
-                <li>
-                                <a>
-                                    <span>Interest 3</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <span>Interest 4</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <span>Interest 5</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-            <li>
-                        <a href="pages/typography.html">
-                            <i class="material-icons">text_fields</i>
-                            <span>User Details</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">swap_calls</i>
-                            <span>Statistics</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="pages/ui/alerts.html">Questions (#)</a>
-                            </li>
-                            <li>
-                                <a href="pages/ui/animations.html">Answers (#)</a>
-                            </li>
-                            <li>
-                                <a href="pages/ui/badges.html">Views (#)</a>
-                            </li>
-
-                            <li>
-                                <a href="pages/ui/breadcrumbs.html">Upvotes (#)</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pages/changelogs.html">
-                            <i class="material-icons">update</i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <i class="material-icons">update</i>
-                            <span>Logout</span>
-                        </a>
-                    </li>
+                    
+            
                 </ul>
             </div>
             <!-- #Menu -->
-            <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                    &copy; 2018 - 2019 <a href="javascript:void(0);">Dyspodium</a>
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0
-                </div>
-            </div>
-            <!-- #Footer -->
+            
         </aside>
         <!-- #END# Left Sidebar -->
         <!-- Right Sidebar -->
@@ -361,7 +322,14 @@
                             </div>
                             <div align="right"><a href = "#"  style="color:red"><h6>Report</h6></a></div>
                                     <div align="right"><h6>Date</h6></div>
+</div>
+</div>
 {% endfor %}
+
+
+</div>
+</div>
+</div>
 
 <!-- Jquery Core Js -->
     <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
@@ -404,7 +372,10 @@
 
     <!-- Demo Js -->
     <script src="{% static 'js/demo.js' %}"></script>
+    <!-- Dropdown Js -->
+    <script src="{% static 'js/dropdown.js' %}"></script>
     
 </body>
 
 </html>
+
