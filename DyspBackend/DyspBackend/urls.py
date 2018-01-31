@@ -23,10 +23,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^question/',include('questions.urls')),
     url(r'^user/', include('users.urls')),
-    url(r'^login/', include('login.urls')),
+    
 
     #url(r'^settings', include('settings.urls')),
-    #url(r'^login/$', auth_views.login),
-    #url(r'^signup/$', core_views.signup, name='signup')
-
+    
 ]
