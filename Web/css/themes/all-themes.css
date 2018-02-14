@@ -1,44 +1,53 @@
 ﻿.theme-red .navbar {
-  background-color: #28b463; }
+  background-color: #04B486; 
+  color: #04B486;
+}
 
 .theme-red .navbar-brand {
-  color: #fff; }
+  color: #2E2E2E; }
   .theme-red .navbar-brand:hover {
-    color: #fff; }
+    color: #2E2E2E; }
   .theme-red .navbar-brand:active {
-    color: #fff; }
+    color: #2E2E2E; }
   .theme-red .navbar-brand:focus {
-    color: #fff; }
+    color: #2E2E2E; }
 
 .theme-red .nav > li > a {
   color: #fff; }
   .theme-red .nav > li > a:hover {
-    background-color: transparent; }
+    background-color: #2E2E2E; }
   .theme-red .nav > li > a:focus {
-    background-color: transparent; }
+    background-color: #2E2E2E; }
 
 .theme-red .nav .open > a {
-  background-color: transparent; }
+  background-color: #2E2E2E; }
   .theme-red .nav .open > a:hover {
-    background-color: transparent; }
+    background-color: #2E2E2E; }
   .theme-red .nav .open > a:focus {
-    background-color: transparent; }
+    background-color: #2E2E2E; }
 
 .theme-red .bars {
-  color: #fff; }
+  color: #04B486; }
 
 .theme-red .sidebar .menu .list li.active {
-  background-color: transparent; }
+  background-color: #6E6E6E; color: #04B486 }
   .theme-red .sidebar .menu .list li.active > :first-child i, .theme-red .sidebar .menu .list li.active > :first-child span {
-    color: #28b463; }
+    color: #04B486; }
 
 .theme-red .sidebar .menu .list .toggled {
-  background-color: transparent; }
+  color: #04B486;
+  color: #04B486 !important;
+  background-color: #2E2E2E; }
 
 .theme-red .sidebar .menu .list .ml-menu {
-  background-color: transparent; }
+  color: #04B486;
+  color: #04B486 !important;
+  background-color: #2E2E2E; }
 
 .theme-red .sidebar .legal {
-  background-color: #fff; }
+  color: #04B486;
+  color: #04B486 !important;
+  background-color: #04B486; }
   .theme-red .sidebar .legal .copyright a {
-    color: #28b463 !important; }
+    color: #04B486;
+    color: #04B486 !important; }
