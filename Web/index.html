@@ -31,51 +31,6 @@
 
     <link href="css/themes/all-themes.css" rel="stylesheet" />
 </head>
-
-<style>
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-    .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>
-
-
 <body class="theme-red" style="background-color:#2E2E2E;">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
@@ -93,12 +48,8 @@
             <p>Please wait...</p>
         </div>
     </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
     
-    <!-- Top Bar -->
+    <div class="overlay"></div>
    <nav class="navbar" style="background-color:#04B486; color:#2E2E2E;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -116,31 +67,40 @@
                         </div>
                 </div>
             </form>
-
             <div class="collapse navbar-collapse" id="navbar-collapse" style="background-color:#04B486; color:#2E2E2E;" >
                 <ul class="nav navbar-nav navbar-right">
+                    <!-- Notifications -->
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                   
                     <li class="">
                         <a href="#">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
                         </a>
                     </li>
-    <!-- Notifications -->
-                    <li class="dropdown" style="background-color:#04B486; color:#2E2E2E;">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="material-icons">notifications</i>
-                        </a>
-          
-                    </li>
 
-        <li class="image" style="background-color:#04B486; color:#2E2E2E;">
-            <span aria-hidden="true"></span><img onclick="myFunction()" class="img-circle img-responsive dropbtn" src="images/user.png" width="48" height="48" alt="User" /></span>
-            </a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="pages/typography.html">Profile</a>
-                <a href="pages/changelogs.html">Settings</a>
-                <a href="#">Logout</a>
-            </div>
-        </li>
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                    
+    
+
+    
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
 
            
                     </ul>
