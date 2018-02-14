@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Home | Dispodium</title>
+    <title>Home | Dyspodium</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -32,6 +32,50 @@
     <link href="css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
+<style>
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
+
+
 <body class="theme-red" style="background-color:#2E2E2E;">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
@@ -55,33 +99,50 @@
     <!-- #END# Overlay For Sidebars -->
     
     <!-- Top Bar -->
-    <nav class="navbar">
+   <nav class="navbar" style="background-color:#04B486; color:#2E2E2E;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="index.html"><b>DISPODIUM</b></a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <form class="navbar-form navbar-left" action="#" method="get" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" value="">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                </div>
+            </form>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse" style="background-color:#04B486; color:#2E2E2E;" >
                 <ul class="nav navbar-nav navbar-right">
-                    
-                    <!-- Notifications -->
-                    <li class="dropdown">
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
+                        </a>
+                    </li>
+    <!-- Notifications -->
+                    <li class="dropdown" style="background-color:#04B486; color:#2E2E2E;">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">notifications</i>
-                            <span class="label-count">7</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">NOTIFICATIONS</li>
-                            <li class="body">
-                                
-                            </li>
-                            <li class="footer">
-                                <a href="javascript:void(0);">View All Notifications</a>
-                            </li>
-                        </ul>
+          
                     </li>
-                    <!-- #END# Notifications -->
+
+        <li class="image" style="background-color:#04B486; color:#2E2E2E;">
+            <span aria-hidden="true"></span><img onclick="myFunction()" class="img-circle img-responsive dropbtn" src="images/user.png" width="48" height="48" alt="User" /></span>
+            </a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="pages/typography.html">Profile</a>
+                <a href="pages/changelogs.html">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </li>
+
+           
                     </ul>
             </div>
         </div>
@@ -187,7 +248,7 @@
             <!-- Footer -->
             <div class="legal" style="background-color:#2E2E2E;">
                 <div class="copyright">
-                    &copy; 2018 - 2019 <a href="javascript:void(0);">Dispodium</a>
+                    &copy; 2018 - 2019 <a href="javascript:void(0);">Dyspodium</a>
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0
@@ -252,7 +313,7 @@
                             		                        
                             		                                <img src="images/user.png" width="30" height="30" alt="User" class="img-circle img-responsive" />
                             		                         </div>
-                            		                         <div class="info-container">
+                            		                         <div class="info-container>
                             		                            <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> Name : <br> Bio : <br> Answer :</h5></div>
                             		                        </div>
                             		                    </div>
