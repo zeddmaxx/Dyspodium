@@ -1,381 +1,125 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Home | Dispodium</title>
-    <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <title>Home | Dyspodium</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Waves Effect Css -->
-    <link href="{% static 'plugins/node-waves/waves.css' %}" rel="stylesheet" />
-
-    <!-- Animation Css -->
-    <link href="{% static 'plugins/animate-css/animate.css' %}" rel="stylesheet" />
-
-    <!-- Morris Chart Css-->
-    <link href="{% static 'plugins/morrisjs/morris.css' %}" rel="stylesheet" />
-
-    <!-- Custom Css -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />
-
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all-themes.css' %}" rel="stylesheet" />
 </head>
-<style>
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+<body class="theme-red" style="background-color:#2E2E2E;">
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-	.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>
-<body class="theme-red">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-            <p>Please wait...</p>
-        </div>
-    </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    
-    <!-- Top Bar -->
-    <nav class="navbar">
+   <nav class="navbar" style="background-color:#04B486; color:#2E2E2E;">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><b>DISPODIUM</b></a>
+                <a class="navbar-brand" href="index.html"><b>DYSPODIUM</b></a>
             </div>
             <form class="navbar-form navbar-left" action="#" method="get" role="search">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="q" value="">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
+                            <button class="btn btn-default glyphicon glyphicon-search" type="submit"></button>
                         </div>
                 </div>
             </form>
+            <div class="collapse navbar-collapse" id="navbar-collapse" style="background-color:#04B486; color:#2E2E2E;" >
 
-            <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                   
                     <li class="">
-                        <a href="{% url 'question:question-add' %}">
+                        <a href="#">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
                         </a>
                     </li>
-	<!-- Notifications -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="material-icons">notifications</i>
-                            <span class="label-count">7</span>
+
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">NOTIFICATIONS</li>
-                            <li class="body">
-                                <ul class="menu">
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">person_add</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>12 new members joined</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 14 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-cyan">
-                                                <i class="material-icons">add_shopping_cart</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>4 sales made</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 22 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-red">
-                                                <i class="material-icons">delete_forever</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy Doe</b> deleted account</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-orange">
-                                                <i class="material-icons">mode_edit</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy</b> changed name</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 2 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-blue-grey">
-                                                <i class="material-icons">comment</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> commented your post</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 4 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">cached</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> updated status</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-purple">
-                                                <i class="material-icons">settings</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>Settings updated</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> Yesterday
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="javascript:void(0);">View All Notifications</a>
-                            </li>
-                        </ul>
                     </li>
-                    <!-- #END# Notifications -->
+                   
+                    
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                    
+    
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
 
-		<li class="image">
-			<a href="#">
-			<span aria-hidden="true"></span><img onclick="myFunction()" class="dropbtn" src="{% static 'images/user.png' %}" width="48" height="48" alt="User" /></span>
-			</a>
-			<div id="myDropdown" class="dropdown-content">
-				<a href="pages/typography.html">Profile</a>
-				<a href="pages/changelogs.html">Settings</a>
-				<a href="#">Logout</a>
-			</div>
-		</li>
-
-	       
+           
                     </ul>
             </div>
         </div>
     </nav>
-    <!-- #Top Bar -->
-    <section>
-        <!-- Left Sidebar -->
-        <aside id="leftsidebar" class="sidebar">
-            
-            <!-- Menu -->
-            <div class="menu">
-                <ul class="list">
-                    
-                    <li class="active">
-                        
-                    </li>
-                    
-                    
-            
-                </ul>
-            </div>
-            <!-- #Menu -->
-            
-        </aside>
-        <!-- #END# Left Sidebar -->
-        <!-- Right Sidebar -->
-        <aside id="rightsidebar" class="right-sidebar">
-            <ul class="nav nav-tabs tab-nav-right" role="tablist">
-            </ul>
-        </aside>
-        <!-- #END# Right Sidebar -->
-    </section>
-
-    <section class="content">
+    <section class="content" style="background-color:#2E2E2E; color:#04B486;">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>USER FEED</h2>
+                <h3>User Feed</h3>
             </div>
-
-
-
-            <div class="row clearfix">
+            <div class="row clearfix" >
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                    <div class="card">
-
-                {% for i in all_qs %}
-                        <div class="header">
+                    <div class="card" style="background-color:#424242; color:#04B486;">
+                        {% for i in all_qs %}
+                        <div class="header" style="background-color:##424242; color:#04B486;">
 
                             <div class="row clearfix">
-                              
                                 <div class="col-xs-12 col-sm-6">
-                                
                                     <div class="user-info">
-
                                         <div class="col-md-3 image">
-                                
-                                        <img src="{% static 'images/user.png' %}" width="48" height="48" alt="User" class="img-circle img-responsive" />
-                                        
+                                        <img src="{% static 'images/user.png' %}" width="40" height="40" alt="User" class="img-circle img-responsive" />
+                                        <div>
+                                   </div> 
                                  </div>
-
-                                 <div class="info-container">
+                                    
+                                        <div class="info-container" style="background-color:#424242; color:#04B486;">
                                     <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> {{ i.creator }} :<a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}}</a> </h5></div>
                                     
                                 </div>
-                            
-                            </div>
+                                        </div>
+                                            <div class="col-xs-12 col-sm-6 align-right" >
+                                                <div class="switch panel-switch-btn">  
+                                                </div>
+                                                </div>
+                                            </div>
 
-                                <div class="col-xs-12 col-sm-6 align-right">
-
-                                    <div class="switch panel-switch-btn">
-                                        
-                                    </div>
+                                    <div align="right"><h6>Report</h6></div>
+                                           <div align="right"><h6>Date</h6></div>
+                                    
                                 </div>
-                            </div>
-                            <div align="right"><a href = "#"  style="color:red"><h6>Report</h6></a></div>
-                                    <div align="right"><h6>Date</h6></div>
-</div>
-</div>
-{% endfor %}
-
-
-</div>
-</div>
-</div>
-
-<!-- Jquery Core Js -->
-    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
-
-    <!-- Bootstrap Core Js -->
-    <script src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
-
-    <!-- Select Plugin Js -->
-    <script src="{% static 'plugins/bootstrap-select/js/bootstrap-select.js' %}"></script>
-
-    <!-- Slimscroll Plugin Js -->
-    <script src="{% static 'plugins/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
-
-    <!-- Waves Effect Plugin Js -->
-    <script src="{% static 'plugins/node-waves/waves.js' %}"></script>
-
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="{% static 'plugins/jquery-countto/jquery.countTo.js' %}"></script>
-
-    <!-- Morris Plugin Js -->
-    <script src="{% static 'plugins/raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'plugins/morrisjs/morris.js' %}"></script>
-
-    <!-- ChartJs -->
-    <script src="{% static 'plugins/chartjs/Chart.bundle.js' %}"></script>
-
-    <!-- Flot Charts Plugin Js -->
-    <script src="{% static 'plugins/flot-charts/jquery.flot.js' %}"></script>
-    <script src="{% static 'plugins/flot-charts/jquery.flot.resize.js' %}"></script>
-    <script src="{% static 'plugins/flot-charts/jquery.flot.pie.js' %}"></script>
-    <script src="{% static 'plugins/flot-charts/jquery.flot.categories.js' %}"></script>
-    <script src="{% static 'plugins/flot-charts/jquery.flot.time.js' %}"></script>
-
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="{% static 'plugins/jquery-sparkline/jquery.sparkline.js' %}"></script>
-
-    <!-- Custom Js -->
-    <script src="{% static 'js/admin.js' %}"></script>
-    <script src="{% static 'js/pages/index.js' %}"></script>
-
-    <!-- Demo Js -->
-    <script src="{% static 'js/demo.js' %}"></script>
-    <!-- Dropdown Js -->
-    <script src="{% static 'js/dropdown.js' %}"></script>
-    
-</body>
-
+                                </div>
+                                {% endfor %}
+             
+                    </div>
+                    </div>
+                    </div>
+        </section>     
+        </body>
 </html>
+
+
+
+
 
