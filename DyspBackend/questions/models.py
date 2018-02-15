@@ -1,22 +1,24 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
-
-
-class UserInfo(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    user_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=100)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     contact_no = models.CharField(max_length=13)
-    location = models.CharField(max_length=100)
-    password = models.CharField(max_length=15)
-    interests = models.CommaSeparatedIntegerField
-    bio = models.CharField(max_length=30)
-    photo = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.user_name +"- "+ self.bio
+    #def __str__(self):
+     #   return self.first_name +"- "+ self.last_name
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
 
 class Question(models.Model):
     question = models.CharField(max_length=100)
@@ -43,7 +45,3 @@ class Answer(models.Model):
     def __str__(self):
         return self.answer +"- "+ str(self.upvotes)
 
-
-class Upvotes(models.Model):
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
-    user_upvotes = models.ForeignKey(UserInfo, on_delete=models.CASCADE)

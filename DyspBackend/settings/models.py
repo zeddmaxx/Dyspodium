@@ -1,2 +1,2 @@
 from django.db import models
-from questions.models import UserInfo, Question, Answer, Upvotes
+from questions.models import Profile, Question, Answer
