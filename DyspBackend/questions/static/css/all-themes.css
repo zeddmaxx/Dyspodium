@@ -1,53 +1,71 @@
 ﻿.theme-red .navbar {
   background-color: #04B486; 
   color: #04B486;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 .theme-red .navbar-brand {
   color: #2E2E2E; }
   .theme-red .navbar-brand:hover {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background-color:transparent; color: #2E2E2E; }
   .theme-red .navbar-brand:active {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     color: transparent; }
   .theme-red .navbar-brand:focus {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     color: #2E2E2E; }
 
 .theme-red .nav > li > a {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   color: #2E2E2E; }
   .theme-red .nav > li > a:hover {
     background-color:transparent; color: #2E2E2E; }
   .theme-red .nav > li > a:focus {
-    background-color: transparent; }
+    background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red .nav .open > a {
-  background-color: transparent; }
+  background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
   .theme-red .nav .open > a:hover {
-    background-color:transparent; color: #2E2E2E;}
+    background-color:transparent; color: #2E2E2E;font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
   .theme-red .nav .open > a:focus {
-    background-color: transparent; }
+    background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
 
 .theme-red .bars {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   color: #04B486; }
 
 .theme-red .sidebar .menu .list li.active {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   background-color: #6E6E6E; color: #04B486 }
   .theme-red .sidebar .menu .list li.active > :first-child i, .theme-red .sidebar .menu .list li.active > :first-child span {
-    color: #04B486; }
+    color: #04B486; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red .sidebar .menu .list .toggled {
   color: #04B486;
   color: #04B486 !important;
-  background-color: #2E2E2E; }
+  background-color: #2E2E2E; 
+font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red .sidebar .menu .list .ml-menu {
   color: #04B486;
   color: #04B486 !important;
-  background-color: #2E2E2E; }
+  background-color: #2E2E2E; 
+font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red .sidebar .legal {
   color: #04B486;
   color: #04B486 !important;
-  background-color: #04B486; }
+  background-color: #04B486; 
+font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
+
   .theme-red .sidebar .legal .copyright a {
     color: #04B486;
-    color: #04B486 !important; }
+    color: #04B486 !important; 
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
+
+.theme-red {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
+
+  
+
