@@ -72,9 +72,9 @@
             <div class="block-header">
                 <h2>Profile Settings</h2>
             </div>
-<br></br>
 
-<div class="info-container" width="device-width" style="background-color:#04B486; color:#000000;">
+
+<div class="container-fluid" width="device-width" style="background-color:#04B486; color:#000000;">
                                             <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><B>GENERAL SETTINGS</B></h5></div>
                                         </div>
             <div class="body">
@@ -88,7 +88,7 @@
                                          <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> First Name : </h4></div>
 </td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
                 <div class="input-group">
-                    <input type="text" class="form-control" size="120" style="background-color : #424242;border: 1px solid  #424242;" placeholder="Betty" name="q" value="">
+                    <input type="text" class="form-control" size="120" style="color : #cecccc; background-color : #424242;border: 1px solid  #424242;" placeholder="Betty" name="q" value="">
                         
                 </div>
             </form></td>
@@ -97,7 +97,7 @@
                                          <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Last Name : </h4></div>
 </td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
                 <div class="input-group">
-                    <input type="text" class="form-control" size="120" style="background-color : #424242;border: 1px solid  #424242;" placeholder="Betty" name="q" value="">
+                    <input type="text" class="form-control" size="120" style="color : #cecccc; background-color : #424242;border: 1px solid  #424242;" placeholder="Betty" name="q" value="">
                         
                 </div>
             </form></td>
@@ -106,7 +106,7 @@
                                          <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Phone No. : </h4></div>
 </td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
                 <div class="input-group">
-                    <input type="number" class="form-control" placeholder="xxxxxxxxx" name="q" style="background-color : #424242;border: 1px solid  #424242; width:895px;" value="">
+                    <input type="number" class="form-control" placeholder="xxxxxxxxx" name="q" style="color : #cecccc; background-color : #424242;border: 1px solid  #424242; width:758px;" value="">
                         
                 </div>
             </form></td>
@@ -122,11 +122,19 @@
                                      </tr></div></table></div>
 
 <br></br>
-<button type="button" align="center" style="margin:auto;color:#000000;
+
+<script>
+  function clickAlert() {
+    var con=confirm("Are you sure yoy want to save the changes?");
+}
+</script>
+
+
+<button type="button" align="center" onclick="clickAlert()" style="margin:auto;color:#000000;
   display:block;background-color:#04B486;border-color: #04B486;">Save</button>
                             
                         </div><BR></BR>
-<div class="info-container" style="background-color:#04B486; color:#000000;">
+<div class="container-fluid" style="background-color:#04B486; color:#000000;">
                                             <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><B>ADVANCED SETTINGS</B></h5></div>
                                         </div>
 <br></br>
@@ -137,7 +145,7 @@
                                          <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Password : </h4></div>
 </td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
                 <div class="input-group">
-                    <input type="text" class="form-control" size="120" readonly="readonly" style="background-color : #424242;border: 1px solid  #424242;" placeholder="***********" name="q" value="">
+                    <input type="text" class="form-control" size="120" readonly="readonly" style="color : #cecccc; background-color : #424242;border: 1px solid  #424242;" placeholder="***********" name="q" value="">
                         
                 </div>
             </form></td>
@@ -166,8 +174,8 @@
                                </div>      </tr> 
 
 </table></div>
-
-
+<br></br>
+<a href="#"><h4>Delete Account?</h4></a>
 </div>
 </section>     
 </body>
