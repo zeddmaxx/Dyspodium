@@ -2,31 +2,32 @@
   background-color: #04B486; 
   color: #04B486;
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 20px;
 }
 
 .theme-red .navbar-brand {
   color: #2E2E2E; }
   .theme-red .navbar-brand:hover {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-    background-color:transparent; color: #2E2E2E; }
+    background-color:transparent; color: #2E2E2E; font-size: 20px;}
   .theme-red .navbar-brand:active {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-    color: transparent; }
+    color: transparent; font-size: 20px;}
   .theme-red .navbar-brand:focus {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-    color: #2E2E2E; }
+    color: #2E2E2E; font-size: 20px;}
 
 .theme-red .nav > li > a {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-  color: #2E2E2E; }
+  color: #2E2E2E; font-size: 20px;}
   .theme-red .nav > li > a:hover {
-    background-color:transparent; color: #2E2E2E; }
+    background-color:transparent; color: #2E2E2E; font-size: 20px;}
   .theme-red .nav > li > a:focus {
-    background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
+    background-color: transparent; font-size: 20px;font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red .nav .open > a {
   background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
-  .theme-red .nav .open > a:hover {
+  .theme-red .nav .open > a:hover {f
     background-color:transparent; color: #2E2E2E;font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
   .theme-red .nav .open > a:focus {
     background-color: transparent; font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
@@ -65,6 +66,7 @@ font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Tim
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
 .theme-red {
+  font-size: 20px;
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;}
 
   

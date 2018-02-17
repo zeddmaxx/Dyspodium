@@ -79,42 +79,20 @@
     <section class="content" style="background-color:#2E2E2E; color:#04B486;">
         <div class="container-fluid">
             <div class="block-header">
-                <h3>User Feed</h3>
+                <h3><font size="6">User Feed</font></h3>
             </div>
-            <div class="row clearfix" >
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="card" style="background-color:#424242; color:#04B486;">
-                        {% for i in all_qs %}
-                        <div class="header" style="background-color:##424242; color:#04B486;">
+            <div class="container-fluid">
 
-                            <div class="row clearfix">
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="user-info">
-                                        <div class="col-md-3 image">
-                                        <img src="{% static 'images/user.png' %}" width="40" height="40" alt="User" class="img-circle img-responsive" />
-                                        <div>
-                                   </div> 
-                                 </div>
-                                    
-                                        <div class="info-container" style="background-color:#424242; color:#04B486;">
-                                    <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5> {{ i.creator }} :<a href = "/question/{{i.id}}/"  style="color:red"> {{i.question}}</a> </h5></div>
-                                    
-                                </div>
-                                        </div>
-                                            <div class="col-xs-12 col-sm-6 align-right" >
-                                                <div class="switch panel-switch-btn">  
-                                                </div>
-                                                </div>
-                                            </div>
-
-                                    <div align="right"><h6>Report</h6></div>
-                                           <div align="right"><h6>Date</h6></div>
-                                    
-                                </div>
-                                </div>
-                                {% endfor %}
-             
-                    </div>
+                    {% for i in all_qs %}
+                     <div class="card" style="background-color:#424242; color:#04B486;">
+                        <div class="row">
+                        <div class="col-sm-1" ><img src="{% static 'images/user.png' %}" width="35" height="35" alt="User" class="img-circle img-responsive" /></div>
+                        <div class="col-sm-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><a href = "/question/{{i.id}}/"  style="color:red"><h5> <font size="3"> {{ i.creator }} </font> <font size="5"> {{i.question}} </a> </font></h5></div>
+                        <div class="col-sm-3" ><div align="right"><h6><font size="2">Report</font></h6></div>
+                                           <div align="right"><h6><font size="2">Date</font></h6></div></div>
+                          </div>
+                        </div>  
+                    {% endfor %}
                     </div>
                     </div>
         </section>     
