@@ -1,16 +1,30 @@
+{% load staticfiles %}
+
 <html>
 <head>
+	<link rel="stylesheet" href="{% static 'lc.css' %}">
+<script type="text/javascript" src="{% static 'lj.js' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Login</title>
 </head>
 <body>
-	<h1>Welcome!</h1> 
-	<p>You can login here.</p>
-	<form method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">Login</button>
-	</form>
-	<p>Not Registered?</p>
-	<button><a href="/account/register/">Register</a></button>
+	<div class="login-page">
+  		<div class="form">
+    		<form class="login-form" method="post">
+			<h1 >Welcome!</h1> 
+				<p > You can login here.</p>
+	
+				{% csrf_token %}
+				{{ form.as_p }}
+
+				<button type="submit">Login</button>
+
+				<p class="message">Not registered? <a href="/account/register/">Create an account</a></p>
+			</form>
+  		</div>
+	</div>
+	
 </body>
 </html>
