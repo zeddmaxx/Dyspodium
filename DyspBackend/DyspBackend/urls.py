@@ -16,14 +16,18 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-
+from DyspBackend import views
 
 urlpatterns = [
 
+    url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
+    url(r'^account/', include('accounts.urls')), 
+    
+    
     url(r'^question/',include('questions.urls')),
     url(r'^user/', include('users.urls')),
-    
+
 
     #url(r'^settings', include('settings.urls')),
     

@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <title>Home | Dyspodium</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all-themes.css' %}" rel="stylesheet">
+    
+</head>
+<body class="theme-red" style="background-color:#2E2E2E;">
+
+    <div class="overlay"></div>
+   <nav class="navbar" style="background-color:#04B486; color:#2E2E2E;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><b>DYSPODIUM</b></a>
+            </div>
+            <form class="navbar-form navbar-left" action="#" method="get" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" value="">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default glyphicon glyphicon-search" type="submit"></button>
+                        </div>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="navbar-collapse" style="background-color:#04B486; color:#2E2E2E;" >
+
+                <ul class="nav navbar-nav navbar-right">
+                   
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                   
+                    
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                    
+    
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+
+           
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="content" style="background-color:#2E2E2E; color:#04B486;">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h3><font size="6">User Feed</font></h3>
+            </div>
+            <div class="container-fluid">
+
+                    {% for i in all_qs %}
+                     <div class="card" style="background-color:#424242; color:#04B486;">
+                        <div class="row">
+                        <div class="col-sm-1" ><img src="{% static 'images/user.png' %}" width="35" height="35" alt="User" class="img-circle img-responsive" /></div>
+                        <div class="col-sm-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><a href = "/question/{{i.id}}/"  style="color:red"><h5> <font size="3"> {{ i.creator }} </font> <font size="5"> {{i.question}} </a> </font></h5></div>
+                        <div class="col-sm-3" ><div align="right"><h6><font size="2">Report</font></h6></div>
+                                           <div align="right"><h6><font size="2">Date</font></h6></div></div>
+                          </div>
+                        </div>  
+                    {% endfor %}
+                    </div>
+                    </div>
+        </section>     
+        </body>
+</html>
+
+
+
+
+
