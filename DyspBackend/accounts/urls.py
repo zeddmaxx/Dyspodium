@@ -11,4 +11,5 @@ urlpatterns = [
 	url(r'^logout/$', logout, {'template_name': 'accounts/logout.html'}),
 	url(r'^register/$', views.register, name='register'),
 	url(r'^profile/$',views.profile, name='profile'),
+	url(r'^settings/$',views.settings, name='settings'),
 ]

@@ -1,0 +1,141 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Settings | Dyspodium</title>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all-themes.css' %}" rel="stylesheet" />
+</head>
+<body class="theme-red" style="background-color:#2E2E2E;">
+
+    <div class="overlay"></div>
+   <nav class="navbar" style="background-color:#04B486; color:#2E2E2E;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><b>DYSPODIUM</b></a>
+            </div>
+            <form class="navbar-form navbar-left" action="#" method="get" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" value="">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default glyphicon glyphicon-search" type="submit"></button>
+                        </div>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="navbar-collapse" style="background-color:#04B486; color:#2E2E2E;" >
+
+                <ul class="nav navbar-nav navbar-right">
+                   
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Question</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                   
+                    
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+                    
+    
+        <li class="">
+                        <a href="profile.html">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+        <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></span>
+                        </a>
+                    </li>
+
+           
+                    </ul>
+            </div>
+        </div>
+    </nav>
+   
+
+    <section class="content" style="background-color:#2E2E2E; color:#04B486;">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Profile Settings</h2>
+            </div>
+
+
+<div class="container-fluid" width="device-width" style="background-color:#04B486; color:#000000;">
+                                            <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><B>GENERAL SETTINGS</B></h5></div>
+                                        </div>
+            <div class="body">
+<br></br>
+<img style="margin-left:3em;"src="{% static 'images/user.png' %}" width="100" height="100" alt="User" class="img-circle img-responsive"/>
+<a href="#"><span class="glyphicon glyphicon-pencil" style="margin-left:4em;">Edit</span></a>                           
+
+<div style="margin-left:15em; margin-right:5em;">
+<form class="navbar-form navbar-left" method="post"> 
+    {% csrf_token %}
+    {{ form.as_p }}
+</form>
+
+<button type="submit" align="center" style="margin:auto;color:#000000;
+  display:block;background-color:#04B486;border-color: #04B486;">Save</button>
+                            
+                        </div> <br></div></div>
+<div class="container-fluid" style="background-color:#04B486; color:#000000;">
+                                            <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><B>ADVANCED SETTINGS</B></h5></div>
+                                        </div>
+<br></br>
+
+<div style="margin-left:15em; margin-right:5em;">
+<table>
+<tr><div class="info-container" style="background-color:#424242; color:#04B486;">
+                                         <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Password : </h4></div>
+</td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
+                <div class="input-group">
+                    <input type="text" class="form-control" size="120" readonly="readonly" style="color : #cecccc; background-color : #424242;border: 1px solid  #424242;" placeholder="***********" name="q" value="">
+                        
+                </div>
+            </form></td>
+                               </div>      </tr> </table>
+  
+<a href="#demo" data-toggle="collapse"><span class="glyphicon glyphicon-pencil" style="margin-left:4em;">Reset</span></a>
+<div id="demo" class="collapse">
+<table>
+<tr><div class="info-container" style="background-color:#424242; color:#04B486;">
+                                         <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Password : </h4></div>
+</td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
+                <div class="input-group">
+                    <input type="text" class="form-control" size="120" readonly="readonly" placeholder="***********" name="q" value="">
+                        
+                </div>
+            </form></td>
+                               </div>      </tr> 
+<tr><div class="info-container" style="background-color:#424242; color:#04B486;">
+                                         <td>   <div class="name row clearfixl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4> Password : </h4></div>
+</td><td><form class="navbar-form navbar-left" action="#" method="get" role="First Name">
+                <div class="input-group">
+                    <input type="text" class="form-control" size="120" readonly="readonly" placeholder="***********" name="q" value="">
+                        
+                </div>
+            </form></td>
+                               </div>      </tr> 
+
+</table></div>
+<br></br>
+<a href="#"><h4>Delete Account?</h4></a>
+</div>
+</section>     
+</body>
+</html>
