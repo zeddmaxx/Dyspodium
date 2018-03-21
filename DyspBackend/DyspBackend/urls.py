@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include('accounts.urls')), 
-    
+    url(r'^about/', include('about.urls')),
     
     url(r'^question/',include('questions.urls')),
     url(r'^user/', include('users.urls')),

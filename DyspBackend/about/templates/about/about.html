@@ -47,31 +47,9 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
-                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span>
+                        <a href="/account/login">Login/Signup
                         </a>
                     </li>
-                   
-                    
-                    <li class="">
-                        <a href="/account/settings">
-                            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></span>
-                        </a>
-                    </li>
-                    
-    
-        <li class="">
-                        <a href="#">
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                        </a>
-                    </li>
-        <li class="">
-                        <a href="#">
-                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></span>
-                        </a>
-                    </li>
-
-           
                     </ul>
             </div>
         </div>
@@ -79,27 +57,19 @@
     <section class="content" style="background-color:#2E2E2E; color:#04B486;">
         <div class="container-fluid">
             <div class="block-header">
-                <h3><font size="6">User Feed</font></h3>
+                <h3><font size="6">About</font></h3>
             </div>
             <div class="container-fluid">
-
-                    {% for i in all_qs %}
                      <div class="card" style="background-color:#424242; color:#04B486;">
-                        <div class="row">
-                        <div class="col-sm-1" ><img src="{% static 'images/user.png' %}" width="35" height="35" alt="User" class="img-circle img-responsive" /></div>
-                        <div class="col-sm-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5><a href = "/question/{{i.id}}/"  style="color:red"><h5> <font size="3"> {{ i.creator }} </font> <font size="5"> {{i.question}} </a> </font></h5></div>
-                        <div class="col-sm-3" ><div align="right"><h6><font size="2">Report</font></h6></div>
-                                           <div align="right"><h6><font size="2">Date</font></h6></div></div>
-                          </div>
+                        <div><h5><font size="4">A question-and-answer site where questions are asked and answered by the users taking part in the discussion.<br>The website would provide a platform to its users to raise their questions on various topics and answer them and get a customized feed according to their fields of interest along with that. It will also allow them to prioritise their questions according to the urgency level so as to improve the efficacy of the site.</font></h5>
+                        </div>
+                        </div>  <br><br>
+                    <div class="card" style="background-color:#424242; color:#04B486;">
+                        <div><h5><font size="4">The sole purpose of the website is to connect users and give them others’ perspective through a question and answer manner. This will not only share and grow the world’s knowledge and vision but also help them tackle day to day problems by asking any doubts or questions in mind. The users will also be provided with a customized feed based on their fields of interest as well as their activity log on the website. In addition to the basic feature, there would be an option with the users to mark their question as urgent, which would help them get their answers faster as the question would be prioritised into others’ feeds. All the answers to a particular question would be sorted on the basis of the number of views and upvotes the answer has received.</font></h5>
+                        </div>
                         </div>  
-                    {% endfor %}
                     </div>
                     </div>
         </section>     
         </body>
 </html>
-
-
-
-
-

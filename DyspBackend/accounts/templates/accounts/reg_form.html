@@ -21,7 +21,12 @@
 		{% csrf_token %}
 		{{ form.as_p }}
 		<button type="submit">CREATE</button>
-   
+		<div>
+				<pre>Have an account? <a href="/account/login">Login</a></pre>
+			</div>
+   		<div>
+				<pre><a href="/about">About</a>   <a href="/contact_us">Contact Us</a>   <a href="/team">Team</a></pre>
+		</div>
     </form>
   </div>
 </div>
